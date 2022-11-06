@@ -1,3 +1,63 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseurl = "https://juanfgarcia.com"
+languageCode = "en-us"
+title = "Juan's Log"
+theme = "hugo-astatine-theme"
+
+preserveTaxonomyNames = true
+rssLimit = 10
+paginate = 10
+
+# Code highlighting
+pygmentsCodefences = true
+pygmentsStyle = "native"
+
+# Taxonomies (only tags and categories are supported out of the box but you can
+# add more)
+[taxonomies]
+    category = "categories"  
+    tag = "tags"
+
+# Configure permalinks style
+[permalinks]
+    post = "/:slug/"
+    page = "/:slug/"
+
+# Configure main navbar links. They can have a weight to select the order.
+[[menu.main]]
+    name = "Posts"
+    url = "/post/"
+    weight = -150
+    
+[[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = -120
+
+[[menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = -130
+
+# Site wide params and SEO
+[params]
+    # Site description. Individual pages can have descriptions too but if
+    # missing it will fallback to that one.
+    description = "todo"
+    # Author of the site
+    authorName = "Juan Francisco Garcia"
+    # Main image for the author. This will be the default image for SEO.
+    [params.imgname]
+        name = "personal.jpg"
+        # Add an alt description for the image
+        alt = "Profile picture"
+
+    # Optional: add a twitter handle and mastodon handle for SEO.
+    # [params.twitter]
+        # name = "@Jack_harkness"
+    # [params.mastodon]
+        # name = "@jkharkness"
+
+
+# Sitemap location (default is /sitemap.xml)
+[sitemap]
+  filename = "sitemap.xml"
