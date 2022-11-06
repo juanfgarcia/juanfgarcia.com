@@ -1,7 +1,7 @@
 baseurl = "https://juanfgarcia.com"
 languageCode = "en-us"
 title = "Juan's Log"
-theme = "hugo-astatine-theme"
+theme = "hugo-astanie-theme"
 
 preserveTaxonomyNames = true
 rssLimit = 10
